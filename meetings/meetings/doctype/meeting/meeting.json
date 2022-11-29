@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Reunion-{asunto}-{DD-MM-YY}-{##}",
+ "creation": "2022-11-29 12:43:17.179904",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asunto",
+  "fecha",
+  "status",
+  "column_break_3",
+  "hora_inicio",
+  "hora_finalizacion",
+  "clasificacion",
+  "section_break_7",
+  "agenda",
+  "section_break_9",
+  "minuta",
+  "invitados_section",
+  "asistentes"
+ ],
+ "fields": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hora_inicio",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Hora Inicio",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hora_finalizacion",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hora finalizacion",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPlaneada\nEn proceso\nCompletada\nCancelada"
+  },
+  {
+   "fieldname": "asunto",
+   "fieldtype": "Data",
+   "label": "Asunto"
+  },
+  {
+   "fieldname": "clasificacion",
+   "fieldtype": "Select",
+   "label": "Clasificacion",
+   "options": "Reuni\u00f3n de Trabajo\nReuni\u00f3n Externa\nConsejo de Administraci\u00f3n\nAsamblea"
+  },
+  {
+   "fieldname": "agenda",
+   "fieldtype": "Table",
+   "label": "Agenda",
+   "options": "Meeting Agenda"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Agenda"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Minuta"
+  },
+  {
+   "fieldname": "minuta",
+   "fieldtype": "Table",
+   "label": "Minuta",
+   "options": "Meeting Minutes"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "invitados_section",
+   "fieldtype": "Section Break",
+   "label": "Invitados"
+  },
+  {
+   "fieldname": "asistentes",
+   "fieldtype": "Table",
+   "label": "Asistentes",
+   "options": "Meeting Attendees"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-29 15:25:49.460869",
+ "modified_by": "Administrator",
+ "module": "Meetings",
+ "name": "Meeting",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
