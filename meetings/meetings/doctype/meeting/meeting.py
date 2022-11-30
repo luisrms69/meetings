@@ -13,7 +13,7 @@ class Meeting(Document):
 	def before_save(self):
 		frappe.throw(
     title='Error',
-    msg='This file does not exist',
+    msg='a que pendejo',
     exc=FileNotFoundError
 )
 #		frappe.throw(("Person's age must be at least 18"))
