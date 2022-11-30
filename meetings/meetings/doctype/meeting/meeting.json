@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Reunion-{asunto}-{DD-MM-YY}-{##}",
+ "autoname": "format:Reunion-{asunto}-{DD}-{MM}-{YY}-{##}",
  "creation": "2022-11-29 12:43:17.179904",
  "default_view": "List",
  "doctype": "DocType",
@@ -15,12 +15,12 @@
   "hora_inicio",
   "hora_finalizacion",
   "clasificacion",
+  "invitados_section",
+  "attendees",
   "section_break_7",
   "agenda",
   "section_break_9",
-  "minuta",
-  "invitados_section",
-  "asistentes"
+  "minuta"
  ],
  "fields": [
   {
@@ -39,7 +39,7 @@
   },
   {
    "fieldname": "hora_finalizacion",
-   "fieldtype": "Data",
+   "fieldtype": "Time",
    "in_list_view": 1,
    "label": "Hora finalizacion",
    "reqd": 1
@@ -96,7 +96,7 @@
    "label": "Invitados"
   },
   {
-   "fieldname": "asistentes",
+   "fieldname": "attendees",
    "fieldtype": "Table",
    "label": "Asistentes",
    "options": "Meeting Attendees"
@@ -104,7 +104,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-29 15:25:49.460869",
+ "modified": "2022-11-29 16:50:27.526803",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
