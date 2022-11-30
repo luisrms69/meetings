@@ -17,6 +17,9 @@
   "clasificacion",
   "invitados_section",
   "attendees",
+  "invitaciones_a_la_reuni\u00f3n_section",
+  "invitation_message",
+  "send_emails",
   "section_break_7",
   "agenda",
   "section_break_9",
@@ -100,11 +103,27 @@
    "fieldtype": "Table",
    "label": "Asistentes",
    "options": "Meeting Attendees"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "invitaciones_a_la_reuni\u00f3n_section",
+   "fieldtype": "Section Break",
+   "label": "Invitaciones a la reuni\u00f3n"
+  },
+  {
+   "fieldname": "invitation_message",
+   "fieldtype": "Text Editor",
+   "label": "Texto de Invitaci\u00f3n"
+  },
+  {
+   "fieldname": "send_emails",
+   "fieldtype": "Button",
+   "label": "Enviar Invitaciones por Correo"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-29 16:50:27.526803",
+ "modified": "2022-11-29 22:10:22.762681",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
