@@ -21,11 +21,26 @@ frappe.ui.form.on('Meeting Attendees', {
 		}
 	},
 });
+
 */
 
-frappe.ui.form.on("Meeting Attendee", {
-	attendee: function(frm, cdt, cdn) {
-		var attendee = frappe.model.get_doc(cdt, cdn);
+frappe.ui.form.on('Meetings', {
+	send_emails: function(frm) {
+		if(frm.doc.status==="Planeada") {
+			frappe.call({
+				method: "meeting.api.send_invitation_emails",
+				args: {
+					meeting: frm.doc.name
+				}
+			});
+		}
+	},
+});
+
+
+frappe.ui.form.on("Meeting Attendees", {
+	attendee(frm, cdt, cdn) {
+		var attendee = frappe.model.get_doc(cdt, cdn)
 		if (attendee.attendee) {
 			// if attendee, get full name
 			frappe.call({
@@ -42,19 +57,5 @@ frappe.ui.form.on("Meeting Attendee", {
 			// if no attendee, clear full name
 			frappe.model.set_value(cdt, cdn, "full_name", null);
 		}
- 	},
-});
-
-
-frappe.ui.form.on('Meetings', {
-	send_emails: function(frm) {
-		if(frm.doc.status==="Planeada") {
-			frappe.call({
-				method: "meeting.api.send_invitation_emails",
-				args: {
-					meeting: frm.doc.name
-				}
-			});
-		}
-	},
+	}
 });
