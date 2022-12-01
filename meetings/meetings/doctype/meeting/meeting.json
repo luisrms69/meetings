@@ -102,7 +102,7 @@
    "fieldname": "attendees",
    "fieldtype": "Table",
    "label": "Asistentes",
-   "options": "Meeting Attendee"
+   "options": "Meeting Attendees"
   },
   {
    "collapsible": 1,
@@ -124,7 +124,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-30 18:53:47.375889",
+ "modified": "2022-11-30 19:05:39.704214",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
