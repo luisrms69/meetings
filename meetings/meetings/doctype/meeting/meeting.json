@@ -51,7 +51,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nPlaneada\nEn proceso\nCompletada\nCancelada"
+   "options": "Planeada\nInvitaciones Enviadas\nEn proceso\nCompletada\nCancelada"
   },
   {
    "fieldname": "asunto",
@@ -102,7 +102,7 @@
    "fieldname": "attendees",
    "fieldtype": "Table",
    "label": "Asistentes",
-   "options": "Meeting Attendees"
+   "options": "Meeting Attendee"
   },
   {
    "collapsible": 1,
@@ -116,6 +116,7 @@
    "label": "Texto de Invitaci\u00f3n"
   },
   {
+   "depends_on": "eval:doc.status===\"Planeada\"",
    "fieldname": "send_emails",
    "fieldtype": "Button",
    "label": "Enviar Invitaciones por Correo"
@@ -123,7 +124,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-29 22:10:22.762681",
+ "modified": "2022-11-30 18:53:47.375889",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
