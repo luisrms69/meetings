@@ -24,11 +24,11 @@ frappe.ui.form.on('Meeting Attendees', {
 
 */
 
-frappe.ui.form.on('Meetings', {
-	send_emails: function(frm) {
+frappe.ui.form.on('Meeting', {
+	send_emails(frm) {
 		if(frm.doc.status==="Planeada") {
 			frappe.call({
-				method: "meeting.api.send_invitation_emails",
+				method: "meetings.api.send_invitation_emails",
 				args: {
 					meeting: frm.doc.name
 				}
