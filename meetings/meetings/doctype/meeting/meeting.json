@@ -119,12 +119,12 @@
    "fieldname": "minutes",
    "fieldtype": "Table",
    "label": "Minuta",
-   "options": "Meeting Minutes"
+   "options": "Meet Minutes"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-01 22:42:10.518038",
+ "modified": "2022-12-02 00:04:00.801829",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
