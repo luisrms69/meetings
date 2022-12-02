@@ -23,7 +23,7 @@
   "section_break_7",
   "agenda",
   "section_break_9",
-  "minuta"
+  "minutes"
  ],
  "fields": [
   {
@@ -83,12 +83,6 @@
    "label": "Minuta"
   },
   {
-   "fieldname": "minuta",
-   "fieldtype": "Table",
-   "label": "Minuta",
-   "options": "Meeting Minutes"
-  },
-  {
    "fieldname": "column_break_3",
    "fieldtype": "Column Break"
   },
@@ -120,11 +114,17 @@
    "fieldname": "send_emails",
    "fieldtype": "Button",
    "label": "Enviar Invitaciones por Correo"
+  },
+  {
+   "fieldname": "minutes",
+   "fieldtype": "Table",
+   "label": "Minuta",
+   "options": "Meeting Minutes"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-01 21:56:21.609878",
+ "modified": "2022-12-01 22:42:10.518038",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
