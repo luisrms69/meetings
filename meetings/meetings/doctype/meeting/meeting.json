@@ -118,13 +118,13 @@
   {
    "fieldname": "minutes",
    "fieldtype": "Table",
-   "label": "Minuta",
+   "label": "Acuerdos",
    "options": "Meet Minutes"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-02 00:04:00.801829",
+ "modified": "2022-12-02 01:10:33.073540",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",

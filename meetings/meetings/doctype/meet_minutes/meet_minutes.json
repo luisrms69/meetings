@@ -12,7 +12,8 @@
   "status",
   "action",
   "assigned_to",
-  "fecha_compromiso"
+  "complete_by",
+  "todo"
  ],
  "fields": [
   {
@@ -44,15 +45,21 @@
    "options": "User"
   },
   {
-   "fieldname": "fecha_compromiso",
+   "fieldname": "complete_by",
    "fieldtype": "Date",
    "label": "Fecha Compromiso"
+  },
+  {
+   "fieldname": "todo",
+   "fieldtype": "Link",
+   "label": "ToDo",
+   "options": "ToDo"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-12-02 00:31:41.345923",
+ "modified": "2022-12-02 01:04:26.789443",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meet Minutes",

@@ -16,6 +16,69 @@ class Meeting(Document):
 			if not attendee.full_name:
 				attendee.full_name = get_full_name(attendee.attendee)
 
+	def on_update(self):
+		self.sync_todos()
+
+	def sync_todos(self):
+		"""Sync ToDos for assignments"""
+		todos_added = [todo.name for todo in
+			frappe.db.get_all("ToDo",
+				filters={
+					"reference_type": self.doctype,
+					"reference_name": self.name,
+					"assigned_by": ""
+				})
+			]
+
+		for minute in self.minutes:
+			if minute.assigned_to and minute.status=="Abierto":
+				if not minute.todo:
+					todo = frappe.get_doc({
+						"doctype": "ToDo",
+						"description": minute.description,
+						"reference_type": self.doctype,
+						"reference_name": self.name,
+						"owner": minute.assigned_to
+					})
+					todo.insert()
+
+					minute.db_set("todo", todo.name, update_modified=False)
+
+				else:
+					todos_added.remove(minute.todo)
+
+			else:
+				minute.db_set("todo", None, update_modified=False)
+
+		for todo in todos_added:
+			# remove closed or old todos
+			todo = frappe.get_doc("ToDo", todo)
+			todo.flags.from_meeting = True
+			todo.delete()	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @frappe.whitelist()
 def get_full_name(attendee):
 	user = frappe.get_doc("User", attendee)
