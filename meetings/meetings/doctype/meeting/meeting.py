@@ -16,6 +16,9 @@ class Meeting(Document):
 			if not attendee.full_name:
 				attendee.full_name = get_full_name(attendee.attendee)
 
+		if self.sala:
+			self.servicios_de_la_sala =  get_service_list(self.sala)
+
 	def on_update(self):
 		self.sync_todos()
 
@@ -58,30 +61,24 @@ class Meeting(Document):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @frappe.whitelist()
 def get_full_name(attendee):
 	user = frappe.get_doc("User", attendee)
 	
 	# Concatenates by space if it has value
 	return " ".join(filter(None, [user.first_name, user.middle_name, user.last_name]))
+
+
+@frappe.whitelist()
+def get_service_list(meeting_room):
+	meet_room = frappe.get_doc("Meeting Room", meeting_room)
+
+	servicios = frappe.db.get_list("Meeting Room Services",
+		filters={
+			"parent": meet_room.nombre_lugar
+		},
+		fields=['tipo_de_servicio'],
+		pluck = 'tipo_de_servicio'
+		)
+
+	return ','.join(str(v) for v in servicios)

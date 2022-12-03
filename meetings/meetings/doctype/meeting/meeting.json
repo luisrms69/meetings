@@ -15,6 +15,14 @@
   "hora_inicio",
   "hora_finalizacion",
   "clasificacion",
+  "lugar_section",
+  "tipo_de_reunion",
+  "sala",
+  "video_conferencia",
+  "column_break_10",
+  "capacidad_de_sala",
+  "ubicacion",
+  "servicios_de_la_sala",
   "invitados_section",
   "attendees",
   "invitaciones_a_la_reuni\u00f3n_section",
@@ -120,11 +128,61 @@
    "fieldtype": "Table",
    "label": "Acuerdos",
    "options": "Meet Minutes"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "lugar_section",
+   "fieldtype": "Section Break",
+   "label": "Lugar"
+  },
+  {
+   "default": "Presencial",
+   "fieldname": "tipo_de_reunion",
+   "fieldtype": "Select",
+   "label": "Tipo de Reunion",
+   "options": "Presencial\nPresencial y Video Conferencia\nSolo Video Conferencia"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.tipo_de_reunion!=\"Presencial\"",
+   "fieldname": "video_conferencia",
+   "fieldtype": "Data",
+   "label": "Video Conferencia"
+  },
+  {
+   "fieldname": "sala",
+   "fieldtype": "Link",
+   "label": "Sala",
+   "options": "Meeting Room"
+  },
+  {
+   "fetch_from": "sala.capacity",
+   "fieldname": "capacidad_de_sala",
+   "fieldtype": "Data",
+   "label": "Capacidad de Sala",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "link_a_room_services.tipo_de_servicio",
+   "fieldname": "servicios_de_la_sala",
+   "fieldtype": "Data",
+   "label": "Servicios de la Sala",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sala.ubicacion",
+   "fieldname": "ubicacion",
+   "fieldtype": "Data",
+   "label": "Ubicacion",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-02 01:10:33.073540",
+ "modified": "2022-12-02 19:16:34.164190",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
