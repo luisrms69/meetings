@@ -14,31 +14,6 @@ frappe.ui.form.on('Meeting', {
 		}
 	},
 
-
-/* Esto lo estare haciendo porsteriormente para que se actualicen los valores en tiempo real
-	sala(frm) {
-		var sala_js = frappe.model.get_doc(frm)
-		if (sala_js) {
-			// Si la sala esta definida
-			frappe.call({
-				method: "meetings.meetings.doctype.meeting.meeting.get_service_list",
-				args: {
-					meeting_room: sala_js
-				},
-				callback: function(r) {
-					frappe.model.set_value("servicios_de_la_sala", r.message);
-				}
-			});
-
-		} else {
-			// Si no hay sala
-			frappe.model.set_value("servicios_de_la_sala", null);
-		}
-	}
-
-*/
-
-
 });
 
 
