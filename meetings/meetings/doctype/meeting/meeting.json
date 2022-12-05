@@ -64,7 +64,8 @@
   {
    "fieldname": "asunto",
    "fieldtype": "Data",
-   "label": "Asunto"
+   "label": "Asunto",
+   "reqd": 1
   },
   {
    "fieldname": "clasificacion",
@@ -153,6 +154,7 @@
    "label": "Video Conferencia"
   },
   {
+   "depends_on": "eval:doc.tipo_de_reunion.includes(\"Presencial\")",
    "fieldname": "sala",
    "fieldtype": "Link",
    "label": "Sala",
@@ -182,7 +184,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-04 15:03:29.593127",
+ "modified": "2022-12-05 11:37:26.540414",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
