@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reuniones</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Acuerdos Pendientes\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Control de Reuniones\",\"col\":4}}]",
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Reuniones</span>\",\"col\":12}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Ultimos acuerdos\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Ultimas Reuniones\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Links Rapidos</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Control de Reuniones\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Acuerdos Pendientes\",\"col\":3}}]",
  "creation": "2022-12-05 12:37:44.851939",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -14,7 +14,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Control de Reuniones",
-   "link_count": 3,
+   "link_count": 2,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -37,26 +37,26 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Acuerdos",
-   "link_count": 0,
-   "link_to": "Meet Minutes",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2022-12-05 12:47:51.557432",
+ "modified": "2022-12-05 12:55:18.702694",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Reuniones",
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "ToDo",
+   "label": "Ultimos acuerdos",
+   "quick_list_filter": "{\"reference_type\":[\"=\",\"Meet Minutes\"],\"status\":[\"=\",\"Open\"]}"
+  },
+  {
+   "document_type": "Meeting",
+   "label": "Ultimas Reuniones"
+  }
+ ],
  "roles": [],
  "sequence_id": 39.0,
  "shortcuts": [
