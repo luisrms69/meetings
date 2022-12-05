@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Reunion-{asunto}-{DD}-{MM}-{YY}-{##}",
+ "autoname": "format:MEET {asunto} {fecha} -{##}",
  "creation": "2022-11-29 12:43:17.179904",
  "default_view": "List",
  "doctype": "DocType",
@@ -185,7 +185,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-05 12:15:21.192768",
+ "modified": "2022-12-05 12:24:26.021010",
  "modified_by": "Administrator",
  "module": "Meetings",
  "name": "Meeting",
