@@ -1,0 +1,41 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Check",
+   "label": "fecha",
+   "width": 0
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Check",
+   "label": "description",
+   "width": 0
+  }
+ ],
+ "creation": "2022-12-05 18:30:32.856356",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letter_head": "",
+ "modified": "2022-12-05 18:33:08.317885",
+ "modified_by": "Administrator",
+ "module": "Meetings",
+ "name": "Seguimiento de Acuerdos",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Meeting",
+ "report_name": "Seguimiento de Acuerdos",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
