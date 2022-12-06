@@ -1,0 +1,42 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "asunto",
+   "fieldtype": "Data",
+   "label": "asunto",
+   "width": 0
+  }
+ ],
+ "creation": "2022-12-05 18:07:05.347390",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"name\",\"Meeting\"],[\"docstatus\",\"Meeting\"],[\"fecha\",\"Meeting\"],[\"asunto\",\"Meeting\"],[\"description\",\"Meet Minutes\"],[\"status\",\"Meet Minutes\"],[\"complete_by\",\"Meet Minutes\"],[\"action\",\"Meet Minutes\"]],\"order_by\":\"`tabMeeting`.`modified` desc\",\"page_length\":20,\"column_widths\":{\"name\":120,\"fecha\":120,\"asunto\":120,\"Meet Minutes:description\":120,\"Meet Minutes:status\":120,\"Meet Minutes:complete_by\":120,\"Meet Minutes:action\":120},\"group_by\":null}",
+ "modified": "2022-12-05 18:14:10.939979",
+ "modified_by": "Administrator",
+ "module": "Meetings",
+ "name": "Acuerdo Pendientes",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Meeting",
+ "report_name": "Acuerdo Pendientes",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
